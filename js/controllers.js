@@ -4,9 +4,14 @@
 
 var engineeringControllers = angular.module('engineeringControllers', []);
 
-engineeringControllers.controller('HeaderController', ['$scope', '$location', 'VisibilityFactory',
-    function ($scope, $location, VisibilityFactory) {
+engineeringControllers.controller('HeaderController', ['$scope', '$location', 'VisibilityFactory', '$translate',
+    function ($scope, $location, VisibilityFactory, $translate) {
         $scope.$location = $location;
+
+        $scope.changeLanguage = function (langKey) {
+            $translate.use(langKey);
+        };
+
         $scope.toggleFilter = function () {
             VisibilityFactory.data.filter = !VisibilityFactory.data.filter;
         }

@@ -8,11 +8,19 @@ var engineeringApp = angular.module('engineeringApp',
         'ngRoute',
         'ngResource',
         'engineeringControllers',
-        'engineeringServices']
+        'engineeringServices',
+        'pascalprecht.translate']
 );
 
-engineeringApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-    //$locationProvider.html5Mode(true);
+engineeringApp.config(['$routeProvider', '$locationProvider', '$translateProvider', function ($routeProvider, $locationProvider, $translateProvider) {
+
+    $translateProvider.translations('en', translationsEN);
+    $translateProvider.translations('ru', translationsRU);
+    $translateProvider.preferredLanguage('ru');
+    $translateProvider.fallbackLanguage('ru');
+
+    $locationProvider.html5Mode(true);
+
     $routeProvider
         .when('/', {
             templateUrl: '/partials/main.html',
