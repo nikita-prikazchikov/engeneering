@@ -40,6 +40,15 @@ engineeringApp.config(['$routeProvider', '$locationProvider', '$translateProvide
         .when('/program', {
             templateUrl: '/partials/program.html',
             controller: 'ProgramController'
+        })
+
+        .when('/publish', {
+            templateUrl: '/partials/publish.html',
+            controller: 'PublishController'
+        })
+
+        .otherwise({
+            redirectTo: '/'
         });
 
 }]);

@@ -8,7 +8,8 @@ var translationsRU = {
         MAIN   : "Главная",
         ORGCOM : "Оргкомитет",
         INVITE : "Приглашение",
-        PROGRAM: "Программа"
+        PROGRAM: "Программа",
+        PUBLISH: "Публикации"
     },
     MAIN_PAGE: {
         HEADER                 : "Международная научная конференция «Инжиниринг техно 2015»",
@@ -37,7 +38,8 @@ var translationsEN = {
         MAIN   : "Main",
         ORGCOM : "Organizing Committee",
         INVITE : "Invite",
-        PROGRAM: "Schedule"
+        PROGRAM: "Schedule",
+        PUBLISH: "Publications"
     },
     MAIN_PAGE: {
         HEADER                 : "International scientific conference \"Techno Engineering 2015\"",
